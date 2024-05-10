@@ -1,0 +1,56 @@
+<head>\
+    <meta http-equiv='refresh' content=10/>\
+    <title>ESPDuino Aquario</title>\
+    <style>\
+      body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }\
+    </style>\
+  </head>\
+  <body>\
+    <p>Uptime: %02d:%02d:%02d</p>\
+    <h1>Valores dos Sensores</h1>\
+    <h3>Aquecedor</h3>\
+    %d\
+    <h3>Temperatura Agua: </h3>\
+    %.1f\
+    <h3>Luminosidade: </h3>\
+    %d\
+    <h3>Temperatura do Ambiente: </h3>\
+    %d\
+    <h3>Umidade Relativa do ar</h3>\ 
+    %d\ 
+  </body>\
+</html>",
+ 
+   hr, min % 60, sec % 60 , estadoAquecedorBD, tempAgua, valorLDR, temperatura, umidade
+  );
+  server.send ( 800, "text/html", txthtml );; 
+}
+ 
+void handleNotFound(){
+//  digitalWrite(led, 1);
+ 
+snprintf ( txthtml, 800,
+ 
+"<html>\
+  <head>\
+    <meta http-equiv='refresh' content=10;url='http://localhost'>\
+    <title>ESPDuino Aquario</title>\
+    <style>\
+      body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }\
+    </style>\
+  </head>\
+  <body>\
+    <h1>Atualizando Sensores</h1>\
+  </body>\
+</html>"
+  );
+  server.send ( 800, "text/html", txthtml );; 
+ 
+ Serial.print("uri falha = ");
+  Serial.println(server.uri());
+  if (server.uri()=="/atualiza"){
+    forcaAtualizacao=HIGH;
+    Serial.print("Mudando a atualização forçada !! ");
+  }
+ 
+}

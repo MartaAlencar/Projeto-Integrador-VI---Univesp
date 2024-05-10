@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta charset=utf-8">
+	<title> Aquário IoT - Projeto Integrador VI </title>
+	<meta http-equiv="refresh" content=300>
+   <script type="text/javascript" src="Imagens\ambiente.png"></script>
+  
+  </head>
+  <body>
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset=utf-8">
+   
+  </head>
+  <body>
+	 <table class="columns">
+      <tr>
+        <td>
+ ﻿<!DOCTYPE html>
+<html>
+<br>   
+ <br>
+		
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChartAgua);
+	 
+      function drawChartAgua() {
+
+        var dataAgua = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Água', 30],
+        ]);
+
+        var optionsAgua = {
+          width: 400, height: 120,
+          redFrom: 29, redTo: 40,
+          yellowFrom:15, yellowTo: 26,
+          greenFrom:26, greenTo:29,
+          max:40,
+          min:10,
+          minorTicks: 10,
+		  yellowColor:'#0099ff'
+		  
+        };
+
+        var chartAgua = new google.visualization.Gauge(document.getElementById('chart_divAgua'));
+
+        chartAgua.draw(dataAgua, optionsAgua);
+      }
+
+        
+    </script>
+
+
+
+		
+    <td><a href="Imagens\agua.png"><div id="chart_divAgua" style="width: 120px; height: 120px;"></div></a> </td>
+
+		
+    
+
+
+<br>
+<button type="button" class="btn btn-danger">Aquecedor off</button>
+
+<br><br>
+	<center><small> Projeto Integrador VI</small><br></center>     
+    <center><small>Última atualização:  04/05/2024 - 20:02 </small><br></center>
+<br><br>
+
+<center><a href="painel2.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="tue">Desligar filtro</a>
+    <a href="painel4.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="tue">Atualizar</a></center>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+
